@@ -1,3 +1,28 @@
 .App {
   text-align: center;
 }
+
+h1 {
+  margin-top: 20px;
+}
+
+#eightball {
+  margin-top: 75px;
+  height: 400px;
+  width: 400px;
+}
+
+#submit {
+  width: 50%;
+  margin-top: 7px;
+}
+
+.form-group {
+  margin-top: 30px;
+}
+
+.form-group input {
+  width: 80%;
+  text-align: center;
+  margin-left: 10%;
+}
