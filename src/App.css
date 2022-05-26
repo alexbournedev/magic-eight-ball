@@ -4,6 +4,7 @@
 
 h1 {
   margin-top: 20px;
+  margin-bottom: 6%;
 }
 
 #eightball {
@@ -25,4 +26,8 @@ h1 {
   width: 80%;
   text-align: center;
   margin-left: 10%;
+}
+
+.eight-ball-reply {
+  font-style: italic;
 }

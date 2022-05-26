@@ -25,26 +25,15 @@ import Answers from "./components/Answers";
 //should it be a function instead to create the random answer?
 // let randomAnswer = answers[Math.floor(Math.random() * answers.length)];
 
-export const handleSubmit = (e) => {
-  // e.preventDefault();
-  let input = document.getElementById("questionInput");
-
-  if (input !== "") {
-    return <Answers />;
-  } else {
-    return <Form />;
-  }
-};
-
 function App() {
-  const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
 
   return (
     <div className="App">
       <h1>Magic 8 Ball</h1>
+      <Answers />
       <img id="eightball" src="8ball-lrg.png" alt="Magic 8 Ball" />
-      <Form setQuestion={question} setAnswer={answer} />
+      <Form setQuestion={Form.question} setAnswer={answer} />
     </div>
   );
 }

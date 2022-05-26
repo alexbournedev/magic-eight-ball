@@ -1,7 +1,20 @@
-import React from "react";
-import { handleSubmit } from "../App";
+import React, { useState } from "react";
+import Answers from "./Answers";
 
-const Form = ({ question, setQuestion, setAnswer }) => {
+export const handleSubmit = (e) => {
+  e.preventDefault();
+  let input = document.getElementById("questionInput");
+
+  if (input !== "") {
+    return <Answers />;
+  } else {
+    return <Form />;
+  }
+};
+
+const Form = () => {
+  const [question, setQuestion] = useState("");
+
   return (
     <div>
       <form>
@@ -17,7 +30,7 @@ const Form = ({ question, setQuestion, setAnswer }) => {
           <button
             id="submit"
             className="btn btn-primary form-control"
-            onClick={handleSubmit}
+            onClick={() => handleSubmit}
           >
             Ask
           </button>

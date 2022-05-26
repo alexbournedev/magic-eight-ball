@@ -18,9 +18,8 @@ const Answers = () => {
   ];
 
   let randomAnswer = answers[Math.floor(Math.random() * answers.length)];
-  randomAnswer.toString();
 
-  return <h3>randomAnswer</h3>;
+  return <h3 className="eight-ball-reply">{randomAnswer}</h3>;
 };
 
 export default Answers;
