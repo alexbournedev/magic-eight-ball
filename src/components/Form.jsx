@@ -1,19 +1,29 @@
 import React, { useState } from "react";
 import Answers from "./Answers";
 
-export const handleSubmit = (e) => {
-  e.preventDefault();
-  let input = document.getElementById("questionInput");
+const answers = [
+  "It is certain",
+  "It is decidedly so",
+  "Without a doubt",
+  "Yes definitely",
+  "You may rely on it",
+  "Reply hazy, try again",
+  "Ask again later",
+  "Better not tell you now",
+  "Cannot predict now",
+  "Concentrate and ask again",
+  "Don't count on it",
+  "My reply is no",
+  "My sources say no",
+  "Outlook not so good",
+  "Very doubtful",
+];
 
-  if (input !== "") {
-    return <Answers />;
-  } else {
-    return <Form />;
-  }
-};
+let randomAnswer = answers[Math.floor(Math.random() * answers.length)];
 
 const Form = () => {
   const [question, setQuestion] = useState("");
+  const [answer, setAnswer] = useState("");
 
   return (
     <div>
@@ -30,7 +40,7 @@ const Form = () => {
           <button
             id="submit"
             className="btn btn-primary form-control"
-            onClick={() => handleSubmit}
+            onClick={() => setAnswer(randomAnswer)}
           >
             Ask
           </button>
